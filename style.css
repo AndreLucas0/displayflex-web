@@ -20,7 +20,7 @@ body {
 .content {
     background-color: #E05DA0;
     width: 70%;
-    padding-bottom: 500px;
+    padding-bottom: 405px;
 }
 
 .sidebar {
@@ -31,7 +31,7 @@ body {
 .part {
     background-color: #5DE05D;
     width: 20%;
-    padding-bottom: 123px;
+    padding-bottom: 125px;
 }
 
 .part:nth-child(1) {
@@ -48,6 +48,7 @@ body {
 
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .flex-container-2{
@@ -56,9 +57,6 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-    .flex-container{
-        display: block;
-    }
     
     .header {
         padding-bottom: 120px;
@@ -79,10 +77,12 @@ body {
     }
 
     .flex-container-2 {
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .flex-container-3 {
-        display: flex;
+    .part:nth-child(2){
+        width: 100%;
+        flex-wrap: nowrap;
     }
 }
